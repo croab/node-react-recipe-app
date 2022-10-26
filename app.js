@@ -70,7 +70,9 @@ app.use(hpp({
 
 // MOUNT ROUTES ===============================================
 app.get('/', (req, res) => {
-  res.status(200).render('base');
+  res.status(200).render('base', {
+    recipe: 'Chocolate cake'
+  });
 });
 
 app.use('/api/v1/recipes', recipeRouter);
