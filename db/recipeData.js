@@ -2,6 +2,7 @@ const recipes = (userIds) => {
   return ([
     {
       title: 'Chocolate cake',
+      image: 'chocolate-cake.jpg',
       ingredients: [
         {
           ingredientName: 'Egg',
@@ -33,6 +34,7 @@ const recipes = (userIds) => {
     },
     {
       title: 'Vegan chocolate brownies',
+      image: 'chocolate-brownie.jpg',
       ingredients: [
         {
           ingredientName: 'Chia seeds',
@@ -64,6 +66,7 @@ const recipes = (userIds) => {
     },
     {
       title: 'Victoria sponge cake',
+      image: 'sponge.jpg',
       ingredients: [
         {
           ingredientName: 'Egg',
@@ -95,11 +98,44 @@ const recipes = (userIds) => {
     },
     {
       title: 'Jelly',
+      image: 'jelly.jpg',
       ingredients: [
         {
           ingredientName: 'Jelly cubes',
           quantityValue: 20,
           quantityUnit: 'units'
+        }
+      ],
+      cuisine: 'Dessert',
+      preparationTime: 5,
+      cookingTime: 180,
+      serves: 4,
+      dietary: '',
+      difficulty: 'easy',
+      price: '$',
+      description: 'Simple but great.',
+      ratingsAverage: 4.1,
+      ratingsQuantity: 6,
+      contributingChefs: userIds[3]
+    },
+    {
+      title: 'Trifle',
+      image: 'trifle.jpg',
+      ingredients: [
+        {
+          ingredientName: 'Jelly cubes',
+          quantityValue: 20,
+          quantityUnit: 'units'
+        },
+        {
+          ingredientName: 'Cream',
+          quantityValue: 300,
+          quantityUnit: 'ml'
+        },
+        {
+          ingredientName: 'Sugar',
+          quantityValue: 200,
+          quantityUnit: 'g'
         }
       ],
       cuisine: 'Dessert',

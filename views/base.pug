@@ -13,13 +13,13 @@ html
       href='https://fonts.googleapis.com/css?family=Lato:300,300i,700',
       rel='stylesheet'
     )
-    title Cookbooks! | Explore foods of the world!
+    title Cookbooks! | #{title || 'Find great recipes!'}
 
   body
     include _header
 
     // CONTENT
-    section.overview
-      h1= recipe
+    block content
+      h1 Placeholder Header
 
     include _footer
