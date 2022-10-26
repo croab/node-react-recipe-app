@@ -1,5 +1,6 @@
 // Imports
 const express = require('express');
+const path = require('path');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
@@ -19,7 +20,15 @@ const restaurantRouter = require('./routes/restaurantRoutes');
 // Instantiate app
 const app = express();
 
+// Set templating engine
+app.set('view engine', 'pug');
+// To limit '/' bugs
+app.set('views', path.join(__dirname, 'views'))
+
 // GLOBAL MIDDLEWARE =========================================
+// Serve static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 // SET SECURITY HTTP HEADERS
 // App.use needs function not a function call
 // helmet() returns this function which stays until called
@@ -58,8 +67,6 @@ app.use(hpp({
     'price'
   ]
 }));
-
-// Could serve static files here........
 
 // MOUNT ROUTES ===============================================
 app.use('/api/v1/recipes', recipeRouter);
