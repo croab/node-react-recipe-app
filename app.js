@@ -69,6 +69,10 @@ app.use(hpp({
 }));
 
 // MOUNT ROUTES ===============================================
+app.get('/', (req, res) => {
+  res.status(200).render('base');
+});
+
 app.use('/api/v1/recipes', recipeRouter);
 app.use('/api/v1/cookbooks', cookbookRouter);
 app.use('/api/v1/users', userRouter);
