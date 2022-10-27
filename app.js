@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const cors = require('cors');
 
 const CustomError = require('./utils/customError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -26,8 +27,13 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'))
 
 // GLOBAL MIDDLEWARE =========================================
+// Use cors
+app.use(cors());
+
 // Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+// Have Node serve the files for the built React app
+app.use(express.static(path.resolve(__dirname, './../client/build')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // SET SECURITY HTTP HEADERS
 // App.use needs function not a function call
@@ -86,5 +92,10 @@ app.use('*', (req, res, next) => {
 
 // Then handle all errors if any arise - TODO
 app.use(globalErrorHandler);
+
+// All other GET requests not handled before will return the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './../client/build', 'index.html'));
+});
 
 module.exports = app;

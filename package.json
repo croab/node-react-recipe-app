@@ -6,12 +6,17 @@
   "scripts": {
     "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node ./db/seeds.js"
+    "seed": "node ./db/seeds.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "engines": {
+    "node": "16.15.1"
   },
   "author": "Benjamin Croad",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-mongo-sanitize": "^2.2.0",
