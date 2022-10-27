@@ -16,7 +16,6 @@ const cookbookRouter = require('./routes/cookbookRoutes');
 const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const restaurantRouter = require('./routes/restaurantRoutes');
-const viewRouter = require('./routes/viewRoutes');
 
 // Instantiate app
 const app = express();
@@ -71,7 +70,6 @@ app.use(hpp({
 
 // MOUNT ROUTES ===============================================
 
-app.use('/', viewRouter);
 app.use('/api/v1/recipes', recipeRouter);
 app.use('/api/v1/cookbooks', cookbookRouter);
 app.use('/api/v1/users', userRouter);
