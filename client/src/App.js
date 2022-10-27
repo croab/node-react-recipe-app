@@ -1,20 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom"
+
 import styles from "./App.module.css";
+import Navbar from "./components/navbar";
+import Home from "./routes/home";
+import Recipes from "./routes/recipes";
 
 function App() {
   return (
     <div className={styles.App}>
-      <nav className={styles.navbar}>
-        <div>
-          {/* Logo to go here */}
-        </div>
-        <div>
-          <Link to="/" className={styles.navbarItem}>Home</Link> |{" "}
-          <Link to="/recipes" className={styles.navbarItem}>Recipes</Link> |{" "}
-          <Link to="/cookbooks" className={styles.navbarItem}>Cookbooks</Link>
-        </div>
-      </nav>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="recipes" element={<Recipes />} />
+          {/* <Route path="cookbooks" element={<Cookbooks />} /> */}
+        </Routes>
+      </div>
     </div>
   );
 }
