@@ -12,6 +12,7 @@ export default function Navbar() {
         <ul>
           <li><CustomLink to="/" className={styles.navbarItem}>Home</CustomLink></li>
           <li><CustomLink to="/recipes" className={styles.navbarItem}>Recipes</CustomLink></li>
+          <li><CustomLink to="/upload" className={styles.navbarItem}>Upload</CustomLink></li>
           <li><CustomLink to="/cookbooks" className={styles.navbarItem}>Cookbooks</CustomLink></li>
         </ul>
       </div>
