@@ -29,7 +29,8 @@ const recipeSchema = new mongoose.Schema(
       trim: true
     },
     image: {
-      type: String
+      type: String,
+      required: [true, 'A recipe requires an image.']
     },
     description: {
       type: String,
