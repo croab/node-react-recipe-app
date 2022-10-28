@@ -1,5 +1,6 @@
 import footerStyles from "./footer.module.css";
 
+
 function Footer() {
   return (
     <div className={footerStyles.footer}>
@@ -12,6 +13,7 @@ function Footer() {
       </div>
       <div className="footer-copyright">
         By Benjamin Croad
+
       </div>
     </div>
   )
