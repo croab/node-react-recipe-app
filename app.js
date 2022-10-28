@@ -83,7 +83,7 @@ app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/restaurants', restaurantRouter);
 
 // All other GET requests not handled before will return the React app
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 // If above routes are not found trigger the below
