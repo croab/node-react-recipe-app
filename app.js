@@ -32,7 +32,7 @@ app.use(cors());
 
 // Serve static files
 // Have Node serve the files for the built React app
-app.use(express.static(path.resolve(__dirname, './../client/build')));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 // app.use(express.static(path.join(__dirname, 'public')));
 
 // SET SECURITY HTTP HEADERS
@@ -84,7 +84,7 @@ app.use('/api/v1/restaurants', restaurantRouter);
 
 // All other GET requests not handled before will return the React app
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './../client/build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 // If above routes are not found trigger the below
 app.use('*', (req, res, next) => {
