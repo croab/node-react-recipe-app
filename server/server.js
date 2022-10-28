@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './config.env' });
 // Import app
-const app = require('./../app');
+const app = require('../app');
 
 // Create DB
 const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
