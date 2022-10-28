@@ -1,6 +1,6 @@
 import React from "react";
 
-function App() {
+function Recipes() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Recipes;

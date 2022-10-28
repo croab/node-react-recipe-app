@@ -1,19 +1,19 @@
-import styles from "./../App.module.css";
+import navbarStyles from "./navbar.module.css";
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import logo from "./../public/images/cookbook-colorful-logo.png";
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logoContainer}>
-        <img src={logo} alt="Cookbook logo" className={styles.logo}/>
+    <nav className={navbarStyles.navbar}>
+      <div className={navbarStyles.logoContainer}>
+        <img src={logo} alt="Cookbook logo" className={navbarStyles.logo}/>
       </div>
-      <div className={styles.navigation}>
+      <div className={navbarStyles.navigation}>
         <ul>
-          <li><CustomLink to="/" className={styles.navbarItem}>Home</CustomLink></li>
-          <li><CustomLink to="/recipes" className={styles.navbarItem}>Recipes</CustomLink></li>
-          <li><CustomLink to="/upload" className={styles.navbarItem}>Upload</CustomLink></li>
-          <li><CustomLink to="/cookbooks" className={styles.navbarItem}>Cookbooks</CustomLink></li>
+          <li><CustomLink to="/" className={navbarStyles.navbarItem}>Home</CustomLink></li>
+          <li><CustomLink to="/recipes" className={navbarStyles.navbarItem}>Recipes</CustomLink></li>
+          <li><CustomLink to="/upload" className={navbarStyles.navbarItem}>Upload</CustomLink></li>
+          <li><CustomLink to="/cookbooks" className={navbarStyles.navbarItem}>Cookbooks</CustomLink></li>
         </ul>
       </div>
     </nav>
