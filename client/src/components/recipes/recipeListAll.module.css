@@ -1,0 +1,8 @@
+.cardList {
+
+}
+
+.recipeListWrapper {
+  display: flex;
+  justify-content: center;
+}

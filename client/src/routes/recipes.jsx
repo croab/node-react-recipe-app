@@ -1,4 +1,6 @@
 import React from "react";
+import RecipeListAll from "../components/recipes/recipeListAll";
+import recipeStyles from "./recipes.module.css";
 
 function Recipes() {
   const [data, setData] = React.useState(null);
@@ -12,9 +14,10 @@ function Recipes() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       <main>
-        <p>{!data ? "Loading..." : data[1].title}</p>
+        <h2>All recipes</h2>
+        <RecipeListAll />
       </main>
     </div>
   );

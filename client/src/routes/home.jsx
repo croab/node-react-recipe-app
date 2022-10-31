@@ -1,7 +1,7 @@
 import React from "react";
 import homeStyles from './home.module.css';
-import RecipeList from './../components/recipes/recipeList';
-import recipeStyles from './../components/recipes/recipeList.module.css';
+import RecipeListTop from '../components/recipes/recipeListTop';
+import recipeStyles from './../components/recipes/recipeListTop.module.css';
 
 function Home() {
   return (
@@ -15,7 +15,8 @@ function Home() {
         <div className={homeStyles.homeImg}></div>
       </div>
       <div className={recipeStyles.wrapper}>
-        <RecipeList />
+        <h2>Top recipes</h2>
+        <RecipeListTop />
       </div>
     </main>
   )

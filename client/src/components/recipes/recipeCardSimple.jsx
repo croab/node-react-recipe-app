@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import recipeCardStyles from './recipeCard.module.css'
+import recipeCardStyles from './recipeCardSimple.module.css'
 
-function RecipeCard(props) {
+function RecipeCardSimple(props) {
   return (
     <div className={recipeCardStyles.card}>
       <p className={recipeCardStyles.cardText}>{props.title}</p>
@@ -9,4 +9,4 @@ function RecipeCard(props) {
   )
 }
 
-export default RecipeCard;
+export default RecipeCardSimple;

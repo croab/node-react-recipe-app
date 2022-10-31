@@ -17,13 +17,15 @@ function App() {
   return (
     <div className={styles.App}>
       <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="recipes" element={<Recipes />} />
-          <Route path="cookbooks" element={<Cookbooks />} />
-          <Route path="upload" element={<FilesUploadComponent />} />
-        </Routes>
+      <div className={styles.bodyContainer}>
+        <div className={styles.bodyWrapper}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="recipes" element={<Recipes />} />
+            <Route path="cookbooks" element={<Cookbooks />} />
+            <Route path="upload" element={<FilesUploadComponent />} />
+          </Routes>
+        </div>
       </div>
       <Footer />
     </div>

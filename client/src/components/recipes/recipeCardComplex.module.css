@@ -1,0 +1,54 @@
+.cardProduct {
+  overflow: hidden;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.cardSections {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.greenDiv {
+  background-color: #B8E013;
+  flex-grow: 1;
+}
+
+.orangeDiv {
+  background-color: #FFBE58;
+  flex-grow: 1;
+}
+
+.pinkDiv {
+  background-color: #CC6CE6;
+  flex-grow: 1;
+}
+
+.cardProduct img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.cardProduct h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cardProduct p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.cardProduct .cardProductInfos {
+  padding: 16px;
+  height: 100%;
+}
