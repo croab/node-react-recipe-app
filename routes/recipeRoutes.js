@@ -8,7 +8,7 @@ const router = express.Router();
 router.use('/:recipeId/reviews', reviewRouter);
 
 router
-  .route('/top-5-recipes')
+  .route('/top-6-recipes')
   .get(recipeController.aliasTopRecipes, recipeController.getAllRecipes);
 
 router

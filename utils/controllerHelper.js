@@ -39,16 +39,19 @@ class ControllerHelper {
   }
 
   limitFields() {
-    if (this.queryString.limit) {
-      const limitFormatted = this.queryString.limit.split(',').join(' ');
-      this.query = this.query.select(limitFormatted);
-    } else if (this.query.schema.obj.title) {
-      this.query = this.query.select('title');
-    } else if (this.query.schema.obj.name) {
-      this.query = this.query.select('name');
+    if (this.queryString.fields) {
+      const fields = this.queryString.fields.split(',').join(' ');
+      this.query = this.query.select(fields);
     } else {
-      this.query = this.query.select('createdAt');
+      this.query = this.query.select('-__v');
     }
+    // else if (this.query.schema.obj.title) {
+    //   this.query = this.query.select('title');
+    // } else if (this.query.schema.obj.name) {
+    //   this.query = this.query.select('name');
+    // } else {
+    //   this.query = this.query.select('createdAt');
+    // }
     return this;
   }
 
