@@ -1,0 +1,16 @@
+.card {
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg');
+  background-size: cover;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  transition: 0.3s;
+  cursor: pointer;
+}

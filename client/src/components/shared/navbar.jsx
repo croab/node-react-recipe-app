@@ -1,6 +1,6 @@
 import navbarStyles from "./navbar.module.css";
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
-import logo from "./../public/images/cookbook-colorful-logo.png";
+import logo from "./../../public/images/cookbook-colorful-logo.png";
 
 export default function Navbar() {
   return (

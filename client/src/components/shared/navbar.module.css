@@ -2,13 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 20px;
+  padding-right: 5vw;
+  padding-left: 5vw;
+
   background-color: white;
 }
 
 .logoContainer {
-  padding: 10px;
-  margin-left: 20px;
+  /* padding: 10px; */
+  /* margin-left: 20px; */
 }
 
 .logo {
@@ -19,6 +21,7 @@
 .logo:hover {
   box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
   transition: 0.3s;
+  cursor: pointer;
 }
 
 
@@ -40,7 +43,7 @@ li {
   padding: 15px 0;
 }
 
-a {
+.navbarItem {
   width: 10vw;
   text-transform: uppercase;
   text-decoration: none;
@@ -50,7 +53,7 @@ a {
   padding: 15px 20px;
   position: relative;
 }
-a:after {
+.navbarItem:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -62,7 +65,7 @@ a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after {
+.navbarItem:hover:after {
   width: 100%;
   left: 0;
 }

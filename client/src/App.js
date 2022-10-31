@@ -3,8 +3,12 @@ import { Route, Routes } from "react-router-dom"
 
 import styles from "./App.module.css";
 import FilesUploadComponent from "./components/files-upload-component";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+
+// Shared
+import Navbar from "./components/shared/navbar";
+import Footer from "./components/shared/footer";
+
+// Roots of pages
 import Cookbooks from "./routes/cookbooks";
 import Home from "./routes/home";
 import Recipes from "./routes/recipes";
