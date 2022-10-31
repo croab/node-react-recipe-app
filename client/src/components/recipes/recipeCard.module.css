@@ -1,5 +1,5 @@
 .card {
-  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg');
   background-size: cover;
   height: 150px;
   display: flex;
@@ -7,10 +7,16 @@
   align-items: center;
   font-size: 25px;
   color: white;
+  padding: 0 15px;
 }
 
 .card:hover {
+  background-image: linear-gradient(rgba(126, 126, 126, 0.25), rgba(126, 126, 126 ,0.25)), url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg');
   box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
   transition: 0.3s;
   cursor: pointer;
+}
+
+.cardText {
+  text-align: center;
 }
