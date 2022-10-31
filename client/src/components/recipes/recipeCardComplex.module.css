@@ -1,6 +1,6 @@
 .cardProduct {
   overflow: hidden;
-  height: 120px;
+  height: 160px;
   display: flex;
   align-items: center;
   margin-bottom: 15px;
@@ -15,17 +15,23 @@
 
 .greenDiv {
   background-color: #B8E013;
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  width: 100%;
+  /* height: 100%; */
 }
 
 .orangeDiv {
   background-color: #FFBE58;
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  width: 100%;
+  /* height: 100%; */
 }
 
 .pinkDiv {
   background-color: #CC6CE6;
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  width: 100%;
+  /* height: 100%; */
 }
 
 .cardProduct img {

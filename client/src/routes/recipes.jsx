@@ -16,7 +16,7 @@ function Recipes() {
   return (
     <div>
       <main>
-        <h2>All recipes</h2>
+        <h2 className={recipeStyles.title}>All recipes</h2>
         <RecipeListAll />
       </main>
     </div>

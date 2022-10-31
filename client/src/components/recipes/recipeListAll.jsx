@@ -17,7 +17,6 @@ function RecipeListAll() {
     <div>
       <div className={recipeListStyles.cardList}>
         {!data ? "Loading..." : data.map((data) => <RecipeCardComplex id={ data._id } key={ data._id } cardData={data} />)}
-        {/* <RecipeCard name={!data ? "Loading..." : data[1].title} /> */}
       </div>
     </div>
   )

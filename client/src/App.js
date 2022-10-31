@@ -12,6 +12,7 @@ import Footer from "./components/shared/footer";
 import Cookbooks from "./routes/cookbooks";
 import Home from "./routes/home";
 import Recipes from "./routes/recipes";
+// import Recipe from "./routes/recipe";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="recipes" element={<Recipes />} />
+            {/* <Route path="recipe" element={<Recipe />} /> */}
             <Route path="cookbooks" element={<Cookbooks />} />
             <Route path="upload" element={<FilesUploadComponent />} />
           </Routes>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import recipeCardStyles from './recipeCardComplex.module.css'
 import StarList from '../ratings/starsList';
+import Chef from '../chefs/chefInfo';
 
 function RecipeCardSimple(props) {
   const {
@@ -12,8 +13,10 @@ function RecipeCardSimple(props) {
      preparationTime,
      cookingTime,
      dietary,
+     serves,
      difficulty,
-     ratingsAverage
+     ratingsAverage,
+     contributingChefs
   } = props.cardData;
 
   return (
@@ -22,16 +25,20 @@ function RecipeCardSimple(props) {
       <div className={recipeCardStyles.cardSections}>
         <div className={`${recipeCardStyles.cardProductInfos} ${recipeCardStyles.greenDiv}`}>
           <h2>{title}</h2>
+          <p>{cuisine}</p>
           <p>{description}</p>
           <StarList ratingsAverage = {ratingsAverage} />
         </div>
         <div className={`${recipeCardStyles.orangeDiv} ${recipeCardStyles.cardProductInfos}`}>
-          <h2>{title}</h2>
-          <p>{description}</p>
+          <p>Prep time 🔪: {preparationTime}</p>
+          <p>Cooking time 🥘: {cookingTime}</p>
+          <p>Difficulty 😬: {difficulty}</p>
+          <p>Serves 🧍: {serves}</p>
+          <p>Dietary: {dietary}</p>
         </div>
         <div className={`${recipeCardStyles.pinkDiv} ${recipeCardStyles.cardProductInfos}`}>
-          <h2>{title}</h2>
-          <p>{description}</p>
+          <h2>Contributing Chefs</h2>
+          <p>{contributingChefs.map(chef => <Chef chef={chef}/>)}</p>
         </div>
       </div>
     </div>

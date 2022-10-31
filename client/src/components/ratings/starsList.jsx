@@ -20,7 +20,6 @@ class StarList extends Component {
     }
 
     return (
-      // {!numHalfStars ? "Loading..." : numStarsToHalf.map((num) => <RecipeCardComplex id={ data._id } key={ data._id } cardData={data} />)}
       <div className={starsStyle.stars}>{stars}</div>
     )
   }
