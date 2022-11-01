@@ -1,0 +1,4 @@
+.recipeForm {
+  display: flex;
+  flex-direction: column;
+}

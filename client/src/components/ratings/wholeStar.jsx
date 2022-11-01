@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-function WholeStar(props) {
+function WholeStar() {
   const starIcon = <i class="fa-solid fa-star"></i>;
 
   return (

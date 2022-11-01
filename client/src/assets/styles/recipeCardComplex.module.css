@@ -7,6 +7,18 @@
   width: 100%;
 }
 
+.cardProduct:hover {
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  transition: 0.3s;
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
+.links {
+  text-decoration: none;
+  color: black
+}
+
 .cardSections {
   display: flex;
   height: 100%;

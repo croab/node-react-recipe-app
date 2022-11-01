@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
 import RecipeCardComplex from './recipeCardComplex';
-import recipeListStyles from './recipeListAll.module.css'
+import recipeListStyles from './../../assets/styles/recipeListAll.module.css'
 
 function RecipeListAll() {
   const [data, setData] = React.useState(null);
@@ -16,6 +17,7 @@ function RecipeListAll() {
   return (
     <div>
       <div className={recipeListStyles.cardList}>
+
         {!data ? "Loading..." : data.map((data) => <RecipeCardComplex id={ data._id } key={ data._id } cardData={data} />)}
       </div>
     </div>

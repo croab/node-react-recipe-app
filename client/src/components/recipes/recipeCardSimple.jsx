@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import recipeCardStyles from './recipeCardSimple.module.css'
+import { Link } from "react-router-dom";
+import recipeCardStyles from './../../assets/styles/recipeCardSimple.module.css'
 
 function RecipeCardSimple(props) {
   return (
-    <div className={recipeCardStyles.card}>
+    <Link to={`recipes/${props.id}`} className={recipeCardStyles.card} >
       <p className={recipeCardStyles.cardText}>{props.title}</p>
-    </div>
+    </Link>
   )
 }
 

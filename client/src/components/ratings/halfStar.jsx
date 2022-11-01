@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-function HalfStar(props) {
+function HalfStar() {
   const halfStarIcon = <i class="fa-solid fa-star-half-stroke"></i>;
 
   return (

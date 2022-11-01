@@ -57,6 +57,7 @@ const createAndSendToken = async (user, statusCode, res) => {
 // Async because uses db operations
 exports.signup = catchAsync(async (req, res, next) => {
   // The below prevents used from specifying their admin role!
+  console.log(req.body.name);
   const newUser = await User.create({
     name: req.body.name,
     email: req.body.email,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RecipeCardSimple from './recipeCardSimple';
-import recipeListStyles from './recipeListTop.module.css'
+import recipeListStyles from './../../assets/styles/recipeListTop.module.css'
 
 function RecipeListTop() {
   const [data, setData] = React.useState(null);

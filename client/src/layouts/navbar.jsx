@@ -1,6 +1,6 @@
-import navbarStyles from "./navbar.module.css";
+import navbarStyles from "./../assets/styles/navbar.module.css";
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
-import logo from "./../../public/images/cookbook-colorful-logo.png";
+import logo from "./../assets/images/cookbook-colorful-logo.png";
 
 export default function Navbar() {
   return (
@@ -14,6 +14,7 @@ export default function Navbar() {
           <li><CustomLink to="/recipes" className={navbarStyles.navbarItem}>Recipes</CustomLink></li>
           <li><CustomLink to="/upload" className={navbarStyles.navbarItem}>Upload</CustomLink></li>
           <li><CustomLink to="/cookbooks" className={navbarStyles.navbarItem}>Cookbooks</CustomLink></li>
+          <li><CustomLink to="/users/signup" className={navbarStyles.navbarItem}>Signup</CustomLink></li>
         </ul>
       </div>
     </nav>

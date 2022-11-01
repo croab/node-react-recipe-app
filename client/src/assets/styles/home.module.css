@@ -20,6 +20,10 @@ body {
   align-items: center;
 }
 
+.topRecipeWrapper {
+  width: 90%;
+}
+
 .homeWrapper {
   position: relative;
   background: steelblue;
@@ -68,7 +72,7 @@ body {
   width: 55%;
   height: 100%;
   align-self: stretch;
-  background-image: url("./../public/images/recipe1.jpg");
+  background-image: url("./../images/recipe1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

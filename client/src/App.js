@@ -1,18 +1,15 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom";
 
 import styles from "./App.module.css";
-import FilesUploadComponent from "./components/files-upload-component";
+// import FilesUploadComponent from "./components/files-upload-component";
 
 // Shared
-import Navbar from "./components/shared/navbar";
-import Footer from "./components/shared/footer";
+import Navbar from "./layouts/navbar";
+import Footer from "./layouts/footer";
 
-// Roots of pages
-import Cookbooks from "./routes/cookbooks";
-import Home from "./routes/home";
-import Recipes from "./routes/recipes";
-// import Recipe from "./routes/recipe";
+// Routes
+import PagesRouter from './routes/pagesRouter';
 
 function App() {
   return (
@@ -20,13 +17,7 @@ function App() {
       <Navbar />
       <div className={styles.bodyContainer}>
         <div className={styles.bodyWrapper}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="recipes" element={<Recipes />} />
-            {/* <Route path="recipe" element={<Recipe />} /> */}
-            <Route path="cookbooks" element={<Cookbooks />} />
-            <Route path="upload" element={<FilesUploadComponent />} />
-          </Routes>
+          <PagesRouter />
         </div>
       </div>
       <Footer />
