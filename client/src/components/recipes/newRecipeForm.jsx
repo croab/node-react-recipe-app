@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import newRecipeStyles from './../../assets/styles/newRecipeForm.module.css';
+import ButtonSubmit from './../shared/buttonSubmit';
 
 function NewRecipeForm() {
   const [title, setTitle] = useState("");
@@ -41,30 +42,35 @@ function NewRecipeForm() {
       <form onSubmit={handleSubmit} className={newRecipeStyles.recipeForm}>
         <input
           type="text"
+          className='form-group'
           value={title}
           placeholder="Title"
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
           type="text"
+          className='form-group'
           value={image}
           placeholder="Image URL"
           onChange={(e) => setImage(e.target.value)}
         />
         <input
           type="number"
+          className='form-group'
           value={preparationTime}
           placeholder="Preparation time"
           onChange={(e) => setPreparationTime(e.target.value)}
         />
         <input
           type="number"
+          className='form-group'
           value={cookingTime}
           placeholder="Cooking time"
           onChange={(e) => setCookingTime(e.target.value)}
         />
         <input
           type="text"
+          className='form-group'
           value={cuisine}
           placeholder="Cuisine"
           onChange={(e) => setCuisine(e.target.value)}
@@ -75,8 +81,9 @@ function NewRecipeForm() {
           placeholder="Serving size"
           onChange={(e) => setServes(e.target.value)}
         />
-
-        <button type="submit">Create Recipe</button>
+        <br/>
+        {/* <button type="submit">Create Recipe</button> */}
+        <ButtonSubmit />
 
         <div className="message">{message ? <p>{message}</p> : null}</div>
       </form>

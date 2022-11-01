@@ -1,0 +1,56 @@
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.createButton {
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  /* position: absolute;
+  left: 50%;
+  top: 50%; */
+  position: relative;
+  transform: translate(0%, 0%);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0.8em 1.6em;
+  font-size: 18px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.createButton:focus, .createButton:active {
+  outline: none;
+}
+
+.createButton:before, .createButton:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  z-index: -1;
+  border-radius: inherit;
+  background: inherit;
+}
+.createButton:before {
+  background: linear-gradient(90deg, #B8E013, #FFBE58, #CC6CE6, #ffffff, #B8E013, #FFBE58, #CC6CE6, #ffffff);
+  background-size: 200% 200%;
+}
+.createButton:after {
+  margin: 3px;
+}
+.createButton:hover:before, .createButton:focus:before {
+  animation: rainbow-border 1.5s linear infinite
+}
+@keyframes rainbow-border {
+  0% { background-position: 0% 50% }
+  100% { background-position: 200% 50% }
+}

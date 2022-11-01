@@ -4,7 +4,7 @@ import logo from "./../assets/images/cookbook-colorful-logo.png";
 
 export default function Navbar() {
   return (
-    <nav className={navbarStyles.navbar}>
+    <nav className={navbarStyles.navbarCustom}>
       <div className={navbarStyles.logoContainer}>
         <img src={logo} alt="Cookbook logo" className={navbarStyles.logo}/>
       </div>
